@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "commands":{
         "help":{
             "title": "Nicknamer module help",
@@ -57,4 +58,6 @@
         "nopermission":"No permission, sorry",
         "usage":"Wrong usage. Use `nicknamer` to see the help!"
     }
+=======
+>>>>>>> 62b5ebe97e2d3996c8ab4afbbd5e2c71cafe6707
 }
