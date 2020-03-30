@@ -1,0 +1,60 @@
+{
+    "commands":{
+        "help":{
+            "title": "Nicknamer module help",
+            "description":"`nicknamer` \nGet the info \n\n`nicknamer list` \nGet all nicknames \n\n`nicknamer prefix <Only uppest role: 'yes', 'no'> <Role> [<Prefix>]` \nSet (or remove if not set) the prefix! \n\n`nicknamer suffix <Only uppest role: 'yes', 'no'> <Role> [<Suffix>]` \nSet (or remove if not set) the suffix! \n\n`nicknamer info <Role>` \nGet the info about a role and the suffix/prefix \n\n`nicknamer update <User>` \nUpdate the nickname of a user",
+            "color": 4236994
+        },
+        "list":{
+            "title":"List of roles with special names",
+            "description": "%{e}",
+            "color": 4236994,
+            "delimiter":"\n",
+            "usage":"Wrong usage of `list`. Use `nicknamer` to see the help!"
+        },
+        "info":{
+            "title":"%{n} #%{i}",
+            "description":"%{r} \n\n**Upper prefix:** `%{up} ` \n**Normal prefix:** `%{np} ` \n\n**Upper suffix:** `%{us} ` \n**Normal suffix:** `%{ns} `",
+            "color": 4236994,
+            "invalid":"This role is invalid!",
+            "usage":"Wrong usage of `info`. Use `nicknamer` to see the help!"
+        },
+        "prefix":{
+            "usage":"Wrong usage of `prefix`. Use `nicknamer` to see the help!",
+            "invalid":{
+                "role":"This role is invalid!",
+                "upper":"You must use the parameter `yes` or `no`!"
+            },
+            "success":{
+                "yes":"Successfully set the upper prefix of the role!",
+                "no":"Successfully set the normal prefix of the role!"
+            },
+            "remove":{
+                "yes":"Successfully removed the upper prefix of the role!",
+                "no":"Successfully removed the normal prefix of the role!"
+            }
+        },
+        "suffix":{
+            "usage":"Wrong usage of `suffix`. Use `nicknamer` to see the help!",
+            "invalid":{
+                "role":"This role is invalid!",
+                "upper":"You must use the parameter `yes` or `no`!"
+            },
+            "success":{
+                "yes":"Successfully set the upper suffix of the role!",
+                "no":"Successfully set the normal suffix of the role!"
+            },
+            "remove":{
+                "yes":"Successfully removed the upper suffix of the role!",
+                "no":"Successfully removed the normal suffix of the role!"
+            }
+        },
+        "update":{
+            "invalid":"This user is invalid!",
+            "usage":"Wrong usage of `update`. Use `nicknamer` to see the help!",
+            "success": "Successfully updated the nickname!"
+        },
+        "nopermission":"No permission, sorry",
+        "usage":"Wrong usage. Use `nicknamer` to see the help!"
+    }
+}
