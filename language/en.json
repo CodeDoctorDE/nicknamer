@@ -1,9 +1,8 @@
 {
-<<<<<<< HEAD
     "commands":{
         "help":{
             "title": "Nicknamer module help",
-            "description":"`nicknamer` \nGet the info \n\n`nicknamer list` \nGet all nicknames \n\n`nicknamer prefix <Only uppest role: 'yes', 'no'> <Role> [<Prefix>]` \nSet (or remove if not set) the prefix! \n\n`nicknamer suffix <Only uppest role: 'yes', 'no'> <Role> [<Suffix>]` \nSet (or remove if not set) the suffix! \n\n`nicknamer info <Role>` \nGet the info about a role and the suffix/prefix \n\n`nicknamer update <User>` \nUpdate the nickname of a user",
+            "description":"`nicknamer` \nGet the info \n\n`nicknamer list` \nGet all nicknames \n\n`nicknamer prefix <Only uppest role: 'yes', 'no'> <Role> [<Prefix>]` \nSet (or remove if not set) the prefix! \n\n`nicknamer suffix <Only uppest role: 'yes', 'no'> <Role> [<Suffix>]` \nSet (or remove if not set) the suffix! \n\n`nicknamer info <Role>` \nGet the info about a role and the suffix/prefix \n\n`nicknamer update <User>` \nUpdate the nickname of a user \n\n`nicknamer get <User>` \nGet the nickname of a user",
             "color": 4236994
         },
         "list":{
@@ -55,9 +54,12 @@
             "usage":"Wrong usage of `update`. Use `nicknamer` to see the help!",
             "success": "Successfully updated the nickname!"
         },
+        "get":{
+            "invalid":"This user is invalid!",
+            "usage":"Wrong usage of `get`. Use `nicknamer` to see the help!",
+            "get": "The nickname is `%{n}`!"
+        },
         "nopermission":"No permission, sorry",
         "usage":"Wrong usage. Use `nicknamer` to see the help!"
     }
-=======
->>>>>>> 62b5ebe97e2d3996c8ab4afbbd5e2c71cafe6707
 }

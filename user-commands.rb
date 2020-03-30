@@ -24,6 +24,8 @@ class NicknamerModule
           list_command(args.drop(1), event)
         elsif args[0].casecmp('info').zero?
           info_command(args.drop(1), event)
+        elsif args[0].casecmp('get').zero?
+          get_command(args.drop(1), event)
         else
           event.send_message language['usage']
         end
@@ -175,6 +177,20 @@ class NicknamerModule
       unless user.nil?
         update_nickname(user)
         event.send_message(language['success'])
+      else
+        event.send_message(language['invalid'])
+    end
+    else
+      event.send_message(language['usage'])
+    end
+  end
+
+  def get_command(args, event)
+    language = @language.get_json(event.server.id)['commands']['get']
+    if args.length == 1
+      user = event.server.member(args[0])
+      unless user.nil?
+        event.send_message(format(language['get'], n: get_nickname(user)))
       else
         event.send_message(language['invalid'])
     end
