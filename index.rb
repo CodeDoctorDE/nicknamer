@@ -31,7 +31,7 @@ class NicknamerModule include CodeDoBo::BotModule
     nickname = ""
     entry = @client[:nicknamer].first(server_id: member.server.id, role: member.colour_role.id)
     if entry
-      nickname += entry[:upper_prefix] + " "
+      nickname += (entry[:upper_prefix] || "") + " "
     end 
 
     nickname += member.roles.map {|role| 
@@ -46,7 +46,7 @@ class NicknamerModule include CodeDoBo::BotModule
     }.join(" ")
 
     if entry
-      nickname += " " + entry[:upper_suffix]
+      nickname += " " + (entry[:upper_suffix] || "")
     end 
     nickname
   end
