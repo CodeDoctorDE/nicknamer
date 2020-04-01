@@ -12,7 +12,7 @@ class NicknamerModule
 
   def setup
     @client.create_table? :nicknamer do
-      Bignum :server_id
+      Bignum :server_id, unique: true
       String :normal_prefix, default: '', text: true
       String :normal_suffix, default: '', text: true
       String :upper_prefix, default: '', text: true
