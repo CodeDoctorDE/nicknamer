@@ -59,6 +59,8 @@ class NicknamerModule include CodeDoBo::BotModule
   # @return [void]
   #
   def update_nickname(member)
-    member.set_nick get_nickname(member)
+    nickname = get_nickname(member)
+    if(member.display_name != nickname)
+      member.set_nick nickname
   end
 end
