@@ -2,7 +2,6 @@
 
 require 'discordrb'
 
-require_relative './index.rb'
 class NicknamerModule
   def register_user_commands
     nicknamer_commands

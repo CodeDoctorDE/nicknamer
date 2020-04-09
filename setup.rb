@@ -2,7 +2,6 @@
 
 require 'sequel'
 
-require_relative './index.rb'
 class NicknamerModule
   def join(server, _already)
     send_message "\u001b[96mSet up main module for #{server.id}..."
@@ -12,7 +11,8 @@ class NicknamerModule
 
   def setup
     @client.create_table? :nicknamer do
-      Bignum :server_id, unique: true
+      primary_key :id
+      Bignum :server_id
       String :normal_prefix, default: '', text: true
       String :normal_suffix, default: '', text: true
       String :upper_prefix, default: '', text: true
