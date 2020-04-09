@@ -54,13 +54,13 @@ class NicknamerModule
     if args.length == 2
       unless entry.all.empty?
         if upper == 'yes'
-          if entry.first[:normal_prefix].strip.empty?
+          if entry.first[:normal_prefix].blank?
             entry.delete
           else
             entry.update(upper_prefix: '')
           end
         else
-          if entry.first[:upper_prefix].strip.empty?
+          if entry.first[:upper_prefix].blank?
             entry.delete
           else
             entry.update(normal_prefix: '')
